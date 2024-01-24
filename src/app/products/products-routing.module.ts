@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { BasicsPageComponent } from './pages/basics-page/basics-page.component';
-import { UncommonPageComponent } from './pages/uncommon-page/uncommon-page.component';
+import { NgModule } from '@angular/core';
 import { NumbersPageComponent } from './pages/numbers-page/numbers-page.component';
+import { OrderComponent } from './pages/order/order.component';
+import { RouterModule, Routes } from '@angular/router';
+import { UncommonPageComponent } from './pages/uncommon-page/uncommon-page.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
     component: UncommonPageComponent
   },
   {
+    path: 'custom',
+    component: OrderComponent
+  },
+  {
     path: '**',
     redirectTo: ''
   }
@@ -25,6 +30,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class ProductsRoutingModule { }
+

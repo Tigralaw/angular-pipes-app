@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./basics-page.component.css']
 })
 export class BasicsPageComponent {
+
+  public nameLower: string = 'laura';
+  public nameUpper: string = 'LAURA';
+  public fullName: string = 'lAurA yESEniA';
+
+
+  public customDate: Date = new Date();
 }
